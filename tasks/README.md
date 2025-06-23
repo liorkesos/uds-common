@@ -25,7 +25,7 @@ There are multiple task files available in this repository with different object
 
 <!-- TODO: @WSTARR - these were generated with Maru off of https://github.com/defenseunicorns/maru-runner/pull/151 - once that feature is finalized a workflow should be added to check this file for missing text -->
 
-### [setup.yaml](./tasks/setup.yaml)
+### [setup.yaml](./setup.yaml)
 
 | Name | Description |
 |------|-------------|
@@ -37,7 +37,7 @@ There are multiple task files available in this repository with different object
 | **keycloak-user** | Creates a Keycloak user in the UDS Realm |
 | **create-doug-user** | DEPRECATED! Please consider using keycloak-user instead |
 
-### [create.yaml](./tasks/create.yaml)
+### [create.yaml](./create.yaml)
 
 | Name | Description |
 |------|-------------|
@@ -45,20 +45,20 @@ There are multiple task files available in this repository with different object
 | **recreate-latest-tag-package** | Recreate the UDS Zarf Package in the repository |
 | **test-bundle** | Create the test bundle (bundling package + dependencies for testing) |
 
-### [deploy.yaml](./tasks/deploy.yaml)
+### [deploy.yaml](./deploy.yaml)
 
 | Name | Description |
 |------|-------------|
 | **package** | Deploy the created UDS Zarf Package |
 | **test-bundle** | Deploy the created test bundle (deploying package + dependencies for testing) |
 
-### [remove.yaml](./tasks/remove.yaml)
+### [remove.yaml](./remove.yaml)
 
 | Name | Description |
 |------|-------------|
 | **test-bundle** | Remove the deployed test bundle |
 
-### [publish.yaml](./tasks/remove.yaml)
+### [publish.yaml](./publish.yaml)
 
 | Name | Description |
 |------|-------------|
@@ -68,26 +68,26 @@ There are multiple task files available in this repository with different object
 | **test-bundle** | Publish the test bundle for the supplied architecture |
 | **republish-package** | Republish the UDS package |
 
-### [pull.yaml](./tasks/remove.yaml)
+### [pull.yaml](./pull.yaml)
 
 | Name | Description |
 |------|-------------|
 | **latest-package-release** | Pull the last release of the UDS Package (useful for upgrade testing) |
 | **latest-bundle-release** | Pull the last release of the UDS Bundle (useful for upgrade testing) |
 
-### [upgrade.yaml](./tasks/upgrade.yaml)
+### [upgrade.yaml](./upgrade.yaml)
 
 | Name | Description |
 |------|-------------|
 | **create-latest-tag-bundle** | Creates the test bundle at the latest tag in preparation for upgrade testing |
 
-### [utils.yaml](./tasks/utils.yaml)
+### [utils.yaml](./utils.yaml)
 
 | Name | Description |
 |------|-------------|
 | **determine-repo** | Determines the OCI repository that this flavor should go into (i.e. 'unicorn' should be private) |
 
-### [lint.yaml](./tasks/lint.yaml)
+### [lint.yaml](./lint.yaml)
 
 This task file defines a set of linting commands to ensure code quality and compliance. It includes tasks to install linting tool dependencies, perform checks on YAML files and OSCAL configurations, validate shell scripts with shellcheck, and verify or add the SPDX license identifier in source files. Both the `license` and `fix-license` tasks parse a `.license_config.yaml` file in the project root directory, but will default to the Defense Unicorns dual-license if the file is not present.
 
@@ -110,20 +110,20 @@ ignore: [] # an array of paths to ignore
 | **fix-license** | Add the SPDX license identifier to source files |
 | **tasks** | Dry run all tasks in the base tasks file |
 
-### [badge.yaml](./tasks/badge.yaml)
+### [badge.yaml](./badge.yaml)
 
 | Name | Description |
 |------|-------------|
 | **verify-badge** | Verifies that a UDS Package implements UDS Package Practices flagging things that are out of compliance |
 
-### [compliance.yaml](./tasks/compliance.yaml)
+### [compliance.yaml](./compliance.yaml)
 
 | Name | Description |
 |------|-------------|
 | **validate** | Lula Validate OSCAL Compliance |
 | **evaluate** | Lula Evaluate multiple OSCAL Assessment Results |
 
-### [actions.yaml](./tasks/actions.yaml)
+### [actions.yaml](./actions.yaml)
 
 | Name | Description |
 |------|-------------|
